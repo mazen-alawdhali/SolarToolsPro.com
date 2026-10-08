@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | Solar Tools Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #ffffff; margin: 0; padding: 20px; line-height: 1.8; }
+        .container { max-width: 650px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; }
+        h1 { color: #10b981; margin-top: 0; font-size: 24px; }
+        p { color: #ffffff; font-size: 14px; }
+        .contact-methods { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+        .c-btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: #fff; min-width: 140px; }
+        .wa { background: #059669; }
+        .email { background: #0284c7; }
+        form { margin-top: 25px; display: flex; flex-direction: column; gap: 15px; }
+        label { font-weight: bold; color: #10b981; font-size: 14px; }
+        input, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 14px; box-sizing: border-box; }
+        input:focus, textarea:focus { border-color: #10b981; outline: none; }
+        button { background: #0284c7; color: #fff; border: none; padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 15px; transition: 0.2s; }
+        button:hover { background: #0369a1; }
+        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .back-btn:hover { background: #0284c7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">➔ العودة للرئيسية</a>
+        <h1>تواصل معنا / تقديم مقترح وشكوى</h1>
+        <p>يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة Solar Tools Pro:</p>
+
+        <div class="contact-methods">
+            <a href="https://wa.me/message/BSOAV5RVXBNQP1" target="_blank" class="c-btn wa">💬 واتساب مباشر</a>
+            <a href="mailto:mazenalawdhali@gmail.com" class="c-btn email">✉️ البريد الإلكتروني</a>
+        </div>
+
+        <form onsubmit="return false;">
+            <label>إرسال مقترح أو ملاحظة مباشرة:</label>
+            <input type="text" id="senderName" placeholder="اسمك (اختياري)">
+            <textarea id="feedbackMsg" rows="5" placeholder="اكتب مقترحك أو الشكوى هنا..." required></textarea>
+            
+            <button type="button" onclick="sendToEmail()" style="width: 100%; background: #0284c7;">إرسال عبر البريد الإلكتروني</button>
+        </form>
+    </div>
+
+    <script>
+        function sendToEmail() {
+            const name = document.getElementById('senderName').value || 'زائر';
+            const msg = document.getElementById('feedbackMsg').value;
+            if(!msg) { alert('يرجى كتابة نص الرسالة أولاً'); return; }
+            const subject = encodeURIComponent(`مقترح/ملاحظة من ${name} - Solar Tools Pro`);
+            const body = encodeURIComponent(msg);
+            window.location.href = `mailto:mazenalawdhali@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>

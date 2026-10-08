@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Tools Pro | منصة أدوات الطاقة الشمسية الذكية</title>
     
-    <!-- إعدادات SEO لمحركات البحث -->
     <meta name="description" content="منصة Solar Tools Pro المهنية لحساب وتصميم منظومات الطاقة الشمسية الذكية، حساب الألواح المطلوبة، وسعة بطاريات الليثيوم والجل وزمن التشغيل بدقة عالية.">
     <meta name="keywords" content="حاسبة الطاقة الشمسية, حساب أحمال الطاقة الشمسية, حاسبة الألواح الشمسية, حاسبة البطارية, طاقة شمسية اليمن, حساب الكابلات الشمسية, Solar Tools Pro, Smart Solar Calculator">
     <meta name="author" content="مازن العوذلي">
@@ -16,7 +15,6 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://solartoolspro.com/">
 
-    <!-- البيانات المهيكلة لش Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,7 +29,6 @@
     }
     </script>
 
-    <!-- الأيقونات والـ PWA -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -42,18 +39,19 @@
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: #0f172a; 
-            color: #e2e8f0; 
+            color: #ffffff; 
             margin: 0; 
             padding: 0;
             line-height: 1.7;
         }
 
         header {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.95)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.92)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
             border-bottom: 1px solid #334155;
-            padding: 40px 20px 30px;
+            padding: 45px 20px 35px;
             text-align: center;
             position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         .header-container {
@@ -65,9 +63,9 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
             padding: 6px 14px;
             border-radius: 20px;
             cursor: pointer;
@@ -77,44 +75,47 @@
             transition: 0.2s;
         }
         [dir="ltr"] .lang-btn { left: auto; right: 20px; }
-        .lang-btn:hover { background: rgba(255, 255, 255, 0.2); }
+        .lang-btn:hover { background: rgba(255, 255, 255, 0.25); }
 
         h1.site-title {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 900;
             color: #ffffff;
             margin: 0 0 10px 0;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
 
         p.site-subtitle {
             font-size: 15px;
-            color: #10b981;
+            color: #34d399;
             margin: 0 auto;
-            max-width: 600px;
-            font-weight: 600;
+            max-width: 650px;
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
 
         main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 35px 20px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .section-header h2 {
-            font-size: 22px;
+            font-size: 23px;
             color: #ffffff;
             margin: 0 0 8px 0;
+            font-weight: 800;
         }
 
         .section-header p {
             font-size: 14px;
-            color: #94a3b8;
+            color: #f1f5f9;
             margin: 0;
         }
 
@@ -135,61 +136,68 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
             border-color: #10b981;
-            box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.15);
+            box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.2);
+        }
+
+        .card-header-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
         }
 
         .card-icon {
-            font-size: 38px;
-            margin-bottom: 12px;
+            font-size: 32px;
+            line-height: 1;
         }
 
         .card-title {
             font-size: 19px;
             font-weight: 800;
             color: #ffffff;
-            margin: 0 0 8px 0;
+            margin: 0;
         }
 
         .card-brief {
-            font-size: 13.5px;
-            color: #10b981;
+            font-size: 14px;
+            color: #34d399;
             font-weight: 700;
             margin: 0 0 12px 0;
         }
 
         .card-desc {
-            font-size: 13.5px;
-            color: #cbd5e1;
+            font-size: 14px;
+            color: #ffffff;
             margin: 0 0 16px 0;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .card-features-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #f59e0b;
-            margin: 0 0 8px 0;
+            font-size: 14px;
+            font-weight: 800;
+            color: #fbbf24;
+            margin: 0 0 10px 0;
         }
 
         .card-features {
             list-style: none;
             padding: 0;
             margin: 0 0 24px 0;
-            font-size: 12.5px;
-            color: #94a3b8;
+            font-size: 14px;
+            color: #ffffff;
         }
 
         .card-features li {
             position: relative;
             padding-inline-start: 18px;
-            margin-bottom: 8px;
-            line-height: 1.5;
+            margin-bottom: 9px;
+            line-height: 1.55;
         }
 
         .card-features li::before {
@@ -198,6 +206,7 @@
             left: 0;
             color: #10b981;
             font-weight: bold;
+            font-size: 18px;
         }
 
         [dir="rtl"] .card-features li::before {
@@ -209,10 +218,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 20px;
+            padding: 13px 20px;
             border-radius: 12px;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 800;
             text-decoration: none;
             transition: 0.2s;
             text-align: center;
@@ -225,8 +234,8 @@
         .btn-panels { background-color: #0284c7; color: #ffffff; }
         .btn-panels:hover { background-color: #0369a1; }
 
-        .btn-battery { background-color: #0f172a; color: #10b981; border: 1px solid #10b981; }
-        .btn-battery:hover { background-color: rgba(16, 185, 129, 0.1); }
+        .btn-battery { background-color: #0f172a; color: #10b981; border: 1.5px solid #10b981; }
+        .btn-battery:hover { background-color: rgba(16, 185, 129, 0.15); }
 
         /* قسم المقالات والشروحات */
         .articles-section {
@@ -251,36 +260,59 @@
 
         .article-title {
             font-size: 18px;
-            color: #10b981;
+            color: #34d399;
             margin: 0 0 12px 0;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .article-text {
             font-size: 14px;
-            color: #cbd5e1;
+            color: #ffffff;
             margin: 0 0 12px 0;
             text-align: justify;
+            line-height: 1.75;
         }
 
         footer {
             background-color: #0f172a;
             border-top: 1px solid #334155;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 13px;
-            color: #94a3b8;
+            padding: 35px 20px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .footer-nav a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: #34d399;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
-            margin-top: 12px;
+            margin-top: 14px;
         }
 
         .footer-links a {
-            color: #94a3b8;
+            color: #cbd5e1;
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -306,14 +338,14 @@
             <p data-i18n="toolsSubtitle">اختر الأداة المناسبة لاحتياجاتك للحصول على نتائج هندسية دقيقة وموثوقة</p>
         </section>
 
-        <!-- كروت الأدوات الثلاث بالتفاصيل الكاملة -->
         <div class="tools-grid">
             
-            <!-- الحاسبة الرئيسية -->
             <div class="tool-card">
                 <div>
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title" data-i18n="c1Title">حاسبة الطاقة الشمسية الذكية</h3>
+                    <div class="card-header-row">
+                        <span class="card-icon">⚡</span>
+                        <h3 class="card-title" data-i18n="c1Title">حاسبة الطاقة الشمسية الذكية</h3>
+                    </div>
                     <p class="card-brief" data-i18n="c1Brief">أداة هندسية متكاملة لتصميم واحتساب أنظمة الطاقة الشمسية والأحمال الميدانية.</p>
                     <p class="card-desc" data-i18n="c1Desc">حاسبة الطاقة الشمسية الذكية هي أداة هندسية احترافية عالية الدقة، صُممت لمساعدة المهندسين، الفنيين، والمستخدمين في تصميم واختبار أنظمة الطاقة الشمسية بكفاءة وموثوقية عالية.</p>
                     
@@ -331,11 +363,12 @@
                 <a href="https://calc.solartoolspro.com" target="_blank" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ➔</a>
             </div>
 
-            <!-- حاسبة الألواح -->
             <div class="tool-card">
                 <div>
-                    <div class="card-icon">☀️</div>
-                    <h3 class="card-title" data-i18n="c2Title">حاسبة الألواح الشمسية</h3>
+                    <div class="card-header-row">
+                        <span class="card-icon">☀️</span>
+                        <h3 class="card-title" data-i18n="c2Title">حاسبة الألواح الشمسية</h3>
+                    </div>
                     <p class="card-brief" data-i18n="c2Brief">أداة هندسية متخصصة لحساب القدرة الإجمالية وعدد الألواح الشمسية المطلوبة لشحن البطاريات.</p>
                     <p class="card-desc" data-i18n="c2Desc">صُمم تطبيق "حاسبة الألواح الشمسية" لتزويد المهندسين، الفنيين، والمستخدمين بالتقدير العلمي والدقيق لمصفوفات التوليد الشمسية والقدرة المطلوبة (بالواط) لإتمام عملية شحن البطاريات بنجاح وبكفاءة عالية.</p>
                     
@@ -351,11 +384,12 @@
                 <a href="https://panels.solartoolspro.com" target="_blank" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ➔</a>
             </div>
 
-            <!-- حاسبة البطارية -->
             <div class="tool-card">
                 <div>
-                    <div class="card-icon">🔋</div>
-                    <h3 class="card-title" data-i18n="c3Title">حاسبة ومراقب البطارية</h3>
+                    <div class="card-header-row">
+                        <span class="card-icon">🔋</span>
+                        <h3 class="card-title" data-i18n="c3Title">حاسبة ومراقب البطارية</h3>
+                    </div>
                     <p class="card-brief" data-i18n="c3Brief">أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.</p>
                     <p class="card-desc" data-i18n="c3Desc">تطبيق "حاسبة ومراقب البطارية" هو حليفك الميداني المتخصص لحساب وتقييم أداء بنوك البطاريات لمنظومات الطاقة الشمسية والأجهزة الكهربائية بدقة عالية.</p>
                     
@@ -372,7 +406,6 @@
 
         </div>
 
-        <!-- المقالات الهندسية (Google AdSense & SEO) -->
         <section class="articles-section">
             <div class="section-header">
                 <h2 data-i18n="artHeader">📚 الدليل الهندسي وشروحات الطاقة الشمسية</h2>
@@ -404,6 +437,11 @@
     </main>
 
     <footer>
+        <div class="footer-nav">
+            <a href="privacy.html" data-i18n="privacyPolicy">سياسة الخصوصية</a> |
+            <a href="about.html" data-i18n="aboutUs">نبذة عنا</a> |
+            <a href="contact.html" data-i18n="contactUs">اتصل بنا</a>
+        </div>
         <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
         <div class="footer-links">
             <a href="https://calc.solartoolspro.com" target="_blank" data-i18n="fl1">الحاسبة الذكية</a> |
@@ -462,6 +500,9 @@
                 a2Text: "تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.",
                 a3Title: "3. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات",
                 a3Text: "تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.",
+                privacyPolicy: "سياسة الخصوصية",
+                aboutUs: "نبذة عنا",
+                contactUs: "اتصل بنا",
                 copyright: "تصميم وتطوير <strong style=\"color:#10b981;\">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة",
                 fl1: "الحاسبة الذكية", fl2: "حاسبة الألواح", fl3: "حاسبة البطارية"
             },
@@ -513,6 +554,9 @@
                 a2Text: "LiFePO4 lithium batteries offer high efficiency and long cycle life compared to Gel/Lead-Acid. To maximize lifespan, set safe Depth of Discharge (DoD) to 80%. Sizing capacity in Ah or kWh ensures reliable power supply during night hours.",
                 a3Title: "3. Temperature Effects on Solar Panels & Cable Sizing",
                 a3Text: "High temperatures in hot regions reduce solar panel output by up to 15% due to thermal coefficients. Temperature also increases cable resistance, requiring larger copper cross-sections (mm²) to limit voltage drop and thermal strain.",
+                privacyPolicy: "Privacy Policy",
+                aboutUs: "About Us",
+                contactUs: "Contact Us",
                 copyright: "Designed & Developed by <strong style=\"color:#10b981;\">Mazen Alawdhali</strong> &copy; 2026 All Rights Reserved",
                 fl1: "Smart Calculator", fl2: "Panels Calculator", fl3: "Battery Calculator"
             }
