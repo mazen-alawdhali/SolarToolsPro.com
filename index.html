@@ -244,6 +244,7 @@
             transition: 0.2s;
             text-align: center;
             margin-top: auto;
+            cursor: pointer;
         }
 
         .btn-calc { background-color: #059669; color: #ffffff; }
@@ -332,6 +333,7 @@
             color: #cbd5e1;
             text-decoration: none;
             transition: color 0.2s;
+            cursor: pointer;
         }
 
         .footer-links a:hover {
@@ -380,7 +382,7 @@
                         <li data-i18n="c1f7">واجهة ثنائية اللغة: دعم كامل للغتين العربية والإنجليزية بمرونة عالية.</li>
                     </ul>
                 </div>
-                <a href="https://calc.solartoolspro.com" target="_blank" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://calc.solartoolspro.com')" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ➔</a>
             </div>
 
             <div class="tool-card">
@@ -401,7 +403,7 @@
                         <li data-i18n="c2f5">العمل بدون إنترنت (Offline First): واجهة بسيطة وخفيفة تعمل بالكامل دون الحاجة لاتصال بالإنترنت باللغتين العربية والإنجليزية.</li>
                     </ul>
                 </div>
-                <a href="https://panels.solartoolspro.com" target="_blank" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://panels.solartoolspro.com')" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ➔</a>
             </div>
 
             <div class="tool-card">
@@ -421,7 +423,7 @@
                         <li data-i18n="c3f4">العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.</li>
                     </ul>
                 </div>
-                <a href="https://battery.solartoolspro.com" target="_blank" class="card-btn btn-battery" data-i18n="c3Btn">دخول حاسبة البطارية ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://battery.solartoolspro.com')" class="card-btn btn-battery" data-i18n="c3Btn">دخول حاسبة البطارية ➔</a>
             </div>
 
         </div>
@@ -440,15 +442,22 @@
             </div>
 
             <div class="article-block">
-                <h3 class="article-title" data-i18n="a2Title">2. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)</h3>
+                <h3 class="article-title" data-i18n="a2Title">2. حساب قدرة الألواح الشمسية وتحديد العدد المناسب لتغطية الأحمال والشحن</h3>
                 <p class="article-text" data-i18n="a2Text">
+                    لتحديد حجم مصفوفة التوليد الشمسي بدقة، يجب مراعاة قدرة الألواح على تغطية الأحمال الكهربائية المباشرة خلال النهار بالإضافة إلى الطاقة المطلوبة لإعادة شحن بنك البطاريات بالكامل. يتم حساب إجمالي الاستهلاك بالكيلوواط-ساعة (kWh) وقسمته على ساعات ذروة الشمس (Peak Sun Hours) مع إضافة مفقودات المنظومة (15-20%). يُراعي التنبيه الدقيق لاختيار العدد الفعلي المناسب من الألواح وتوزيعها لتجنب عجز التوليد الشمسي أو إجهاد البطاريات.
+                </p>
+            </div>
+
+            <div class="article-block">
+                <h3 class="article-title" data-i18n="a3Title">3. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)</h3>
+                <p class="article-text" data-i18n="a3Text">
                     تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.
                 </p>
             </div>
 
             <div class="article-block">
-                <h3 class="article-title" data-i18n="a3Title">3. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات</h3>
-                <p class="article-text" data-i18n="a3Text">
+                <h3 class="article-title" data-i18n="a4Title">4. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات</h3>
+                <p class="article-text" data-i18n="a4Text">
                     تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.
                 </p>
             </div>
@@ -464,9 +473,9 @@
         </div>
         <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
         <div class="footer-links">
-            <a href="https://calc.solartoolspro.com" target="_blank" data-i18n="fl1">الحاسبة الذكية</a> |
-            <a href="https://panels.solartoolspro.com" target="_blank" data-i18n="fl2">حاسبة الألواح</a> |
-            <a href="https://battery.solartoolspro.com" target="_blank" data-i18n="fl3">حاسبة البطارية</a>
+            <a onclick="openApp('https://calc.solartoolspro.com')" data-i18n="fl1">الحاسبة الذكية</a> |
+            <a onclick="openApp('https://panels.solartoolspro.com')" data-i18n="fl2">حاسبة الألواح</a> |
+            <a onclick="openApp('https://battery.solartoolspro.com')" data-i18n="fl3">حاسبة البطارية</a>
         </div>
     </footer>
 
@@ -516,10 +525,12 @@
                 artSub: "مقالات وإرشادات هندسية لمساعدتك في تصميم منظومات طاقة شمسية آمنة ومستقرة",
                 a1Title: "1. كيفية حساب الأحمال الكهربائية واختيار سعة الإنفرتر المناسب",
                 a1Text: "تعتمد الخطوة الأولى في تصميم أي منظومة طاقة شمسية على التقييم الدقيق للأحمال الكهربائية. يتم ذلك بحساب القدرة المستمرة بالواط (Watt) وقدرة الإقلاع (Surge Power) للمحركات والأجهزة الثقيلة مثل الثلاجات والمضخات. يجب اختيار إنفرتر يغطي إجمالي الأحمال المستمرة مع هامش أمان لا يقل عن 20%، بالإضافة إلى القدرة على تحمل تيارات البدء اللحظية دون حدوث فصل أو إجهاد إلكتروني.",
-                a2Title: "2. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)",
-                a2Text: "تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.",
-                a3Title: "3. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات",
-                a3Text: "تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.",
+                a2Title: "2. حساب قدرة الألواح الشمسية وتحديد العدد المناسب لتغطية الأحمال والشحن",
+                a2Text: "لتحديد حجم مصفوفة التوليد الشمسي بدقة، يجب مراعاة قدرة الألواح على تغطية الأحمال الكهربائية المباشرة خلال النهار بالإضافة إلى الطاقة المطلوبة لإعادة شحن بنك البطاريات بالكامل. يتم حساب إجمالي الاستهلاك بالكيلوواط-ساعة (kWh) وقسمته على ساعات ذروة الشمس (Peak Sun Hours) مع إضافة مفقودات المنظومة (15-20%). يُراعي التنبيه الدقيق لاختيار العدد الفعلي المناسب من الألواح وتوزيعها لتجنب عجز التوليد الشمسي أو إجهاد البطاريات.",
+                a3Title: "3. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)",
+                a3Text: "تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.",
+                a4Title: "4. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات",
+                a4Text: "تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.",
                 privacyPolicy: "سياسة الخصوصية",
                 aboutUs: "نبذة عنا",
                 contactUs: "اتصل بنا",
@@ -570,10 +581,12 @@
                 artSub: "Articles and guidelines to assist you in designing safe and efficient solar power systems",
                 a1Title: "1. Load Sizing & Inverter Capacity Selection",
                 a1Text: "The first step in solar system design is assessing electrical loads. Calculate total continuous power (Watt) and surge power for inductive loads like refrigerators and pumps. Choose an inverter covering continuous load with a 20% safety margin and sufficient surge capacity.",
-                a2Title: "2. Lithium Battery Sizing & Safe Depth of Discharge (DoD)",
-                a2Text: "LiFePO4 lithium batteries offer high efficiency and long cycle life compared to Gel/Lead-Acid. To maximize lifespan, set safe Depth of Discharge (DoD) to 80%. Sizing capacity in Ah or kWh ensures reliable power supply during night hours.",
-                a3Title: "3. Temperature Effects on Solar Panels & Cable Sizing",
-                a3Text: "High temperatures in hot regions reduce solar panel output by up to 15% due to thermal coefficients. Temperature also increases cable resistance, requiring larger copper cross-sections (mm²) to limit voltage drop and thermal strain.",
+                a2Title: "2. Solar PV Wattage & Proper Panel Count Sizing for Loads & Charging",
+                a2Text: "To size the PV array accurately, factor in daytime direct electrical load power alongside energy needed to fully recharge battery banks. Divide daily consumption in kWh by peak sun hours (PSH) with 15-20% system losses. Selecting the appropriate actual panel count avoids power deficits and battery stress.",
+                a3Title: "3. Lithium Battery Sizing & Safe Depth of Discharge (DoD)",
+                a3Text: "LiFePO4 lithium batteries offer high efficiency and long cycle life compared to Gel/Lead-Acid. To maximize lifespan, set safe Depth of Discharge (DoD) to 80%. Sizing capacity in Ah or kWh ensures reliable power supply during night hours.",
+                a4Title: "4. Temperature Effects on Solar Panels & Cable Sizing",
+                a4Text: "High temperatures in hot regions reduce solar panel output by up to 15% due to thermal coefficients. Temperature also increases cable resistance, requiring larger copper cross-sections (mm²) to limit voltage drop and thermal strain.",
                 privacyPolicy: "Privacy Policy",
                 aboutUs: "About Us",
                 contactUs: "Contact Us",
@@ -600,6 +613,11 @@
                 const key = el.getAttribute('data-i18n');
                 if(t[key]) el.innerHTML = t[key];
             });
+        }
+
+        function openApp(baseUrl) {
+            const targetUrl = baseUrl + (currentLang === 'en' ? '?lang=en' : '?lang=ar');
+            window.open(targetUrl, '_blank');
         }
 
         applyLang();
