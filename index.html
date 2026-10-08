@@ -409,7 +409,7 @@
             <div class="tool-card">
                 <div>
                     <div class="card-header-row">
-                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="10" y1="11" x2="10" y2="13"/><line x1="14" y1="11" x2="14" y2="13"/></svg></span>
+                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="14" y1="11" x2="14" y2="13"/></svg></span>
                         <h3 class="card-title" data-i18n="c3Title">حاسبة ومراقب البطارية</h3>
                     </div>
                     <p class="card-brief" data-i18n="c3Brief">أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.</p>
@@ -616,7 +616,8 @@
         }
 
         function openApp(baseUrl) {
-            const targetUrl = baseUrl + (currentLang === 'en' ? '?lang=en' : '?lang=ar');
+            const lang = currentLang === 'en' ? 'en' : 'ar';
+            const targetUrl = baseUrl + '?lang=' + lang;
             window.open(targetUrl, '_blank');
         }
 
