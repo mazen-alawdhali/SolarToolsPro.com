@@ -16,17 +16,37 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #ffffff; margin: 0; padding: 20px; line-height: 1.8; }
         .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; }
-        h1 { color: #10b981; border-bottom: 2px solid #334155; padding-bottom: 10px; font-size: 24px; }
+        
+        .header-title-box {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            padding: 16px 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h1 { color: #10b981; font-size: 20px; margin: 0; font-weight: 800; }
         h2 { color: #38bdf8; font-size: 18px; margin-top: 20px; }
         p, li { color: #f8fafc; font-size: 14px; }
         a { color: #10b981; text-decoration: none; font-weight: bold; }
-        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; }
+        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
+        .back-btn:hover { background: #0284c7; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-btn">➔ العودة للرئيسية</a>
-        <h1>سياسة الخصوصية لمنصة Solar Tools Pro</h1>
+        
+        <div class="header-title-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <h1>سياسة الخصوصية لمنصة Solar Tools Pro</h1>
+        </div>
+
         <p>مرحباً بكم في منصة Solar Tools Pro. نحن نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية أثناء استخدام أدواتنا وحاسباتنا الهندسية.</p>
         
         <h2>1. البيانات والتخزين المحلي (Offline First)</h2>

@@ -16,7 +16,21 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #ffffff; margin: 0; padding: 20px; line-height: 1.8; }
         .container { max-width: 650px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; }
-        h1 { color: #10b981; margin-top: 0; font-size: 24px; }
+        
+        .header-title-box {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            padding: 16px 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h1 { color: #10b981; font-size: 20px; margin: 0; font-weight: 800; }
         p { color: #ffffff; font-size: 14px; }
         .contact-methods { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
         .c-btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: #fff; min-width: 140px; }
@@ -28,14 +42,19 @@
         input:focus, textarea:focus { border-color: #10b981; outline: none; }
         button { background: #0284c7; color: #fff; border: none; padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 15px; transition: 0.2s; }
         button:hover { background: #0369a1; }
-        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
         .back-btn:hover { background: #0284c7; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-btn">➔ العودة للرئيسية</a>
-        <h1>تواصل معنا / تقديم مقترح وشكوى</h1>
+        
+        <div class="header-title-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <h1>تواصل معنا / تقديم مقترح وشكوى</h1>
+        </div>
+
         <p>يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة Solar Tools Pro:</p>
 
         <div class="contact-methods">

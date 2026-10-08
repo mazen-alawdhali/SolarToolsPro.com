@@ -16,16 +16,36 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #ffffff; margin: 0; padding: 20px; line-height: 1.8; }
         .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; }
-        h1 { color: #10b981; font-size: 24px; }
+        
+        .header-title-box {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            padding: 16px 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h1 { color: #10b981; font-size: 22px; margin: 0; font-weight: 800; }
         h2 { color: #38bdf8; font-size: 18px; margin-top: 25px; }
         p { color: #f8fafc; font-size: 14px; text-align: justify; }
-        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; }
+        .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
+        .back-btn:hover { background: #0284c7; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-btn">➔ العودة للرئيسية</a>
-        <h1>نبذة عن منصة Solar Tools Pro</h1>
+        
+        <div class="header-title-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <h1>نبذة عن منصة Solar Tools Pro</h1>
+        </div>
+
         <p>تم تأسيس منصة <strong>Solar Tools Pro</strong> بواسطة المهندس <strong>مازن العوذلي</strong> لتكون المرجع الهندسي والميداني الأول لفنيي ومهندسي ومستخدمي أنظمة الطاقة الشمسية في اليمن والوطن العربي.</p>
 
         <h2>1. حاسبة الطاقة الشمسية الذكية (Smart Solar Calculator)</h2>
