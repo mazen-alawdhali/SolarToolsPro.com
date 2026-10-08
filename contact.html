@@ -54,10 +54,15 @@
 
         h1 { color: #10b981; font-size: 20px; margin: 0; font-weight: 800; }
         p { color: #ffffff; font-size: 14px; }
-        .contact-methods { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
-        .c-btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: #fff; min-width: 140px; }
+        
+        /* تقسيم الأزرار لصفين */
+        .contact-methods { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+        .row-top { display: flex; gap: 12px; width: 100%; }
+        .c-btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: #fff; min-width: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
         .wa { background: #059669; }
-        .email { background: #0284c7; }
+        .fb { background: #1877F2; }
+        .email { background: #0284c7; width: 100%; }
+
         form { margin-top: 25px; display: flex; flex-direction: column; gap: 15px; }
         label { font-weight: bold; color: #10b981; font-size: 14px; }
         input, textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 14px; box-sizing: border-box; }
@@ -130,7 +135,10 @@
         <p data-i18n="contactIntro">يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة أدوات الطاقة الشمسية الاحترافية:</p>
 
         <div class="contact-methods">
-            <a href="https://wa.me/message/BSOAV5RVXBNQP1" target="_blank" class="c-btn wa" data-i18n="waBtn">💬 واتساب مباشر</a>
+            <div class="row-top">
+                <a href="https://wa.me/message/BSOAV5RVXBNQP1" target="_blank" class="c-btn wa" data-i18n="waBtn">💬 واتساب مباشر</a>
+                <a href="https://www.facebook.com/share/1YF9n8KTFK/" target="_blank" class="c-btn fb" data-i18n="fbBtn">🌐 فيسبوك</a>
+            </div>
             <a href="mailto:mazenalawdhali@gmail.com" class="c-btn email" data-i18n="emailBtn">✉️ البريد الإلكتروني</a>
         </div>
 
@@ -165,6 +173,7 @@
                 contactHeading: "تواصل معنا",
                 contactIntro: "يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة أدوات الطاقة الشمسية الاحترافية:",
                 waBtn: "💬 واتساب مباشر",
+                fbBtn: "🌐 فيسبوك",
                 emailBtn: "✉️ البريد الإلكتروني",
                 formLabel: "إرسال مقترح أو ملاحظة مباشرة:",
                 namePh: "اسمك (اختياري)",
@@ -184,6 +193,7 @@
                 contactHeading: "Contact Us",
                 contactIntro: "We welcome your inquiries and suggestions to improve the Solar Tools Pro platform:",
                 waBtn: "💬 Direct WhatsApp",
+                fbBtn: "🌐 Facebook",
                 emailBtn: "✉️ Direct Email",
                 formLabel: "Send Feedback or Note Directly:",
                 namePh: "Your Name (Optional)",
@@ -199,10 +209,11 @@
             }
         };
 
-        let currentLang = localStorage.getItem('stp_main_lang') || 'ar';
+        let currentLang = localStorage.getItem('solar_app_lang') || localStorage.getItem('stp_main_lang') || 'ar';
 
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('solar_app_lang', currentLang);
             localStorage.setItem('stp_main_lang', currentLang);
             applyLang();
         }
