@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Tools Pro | منصة أدوات الطاقة الشمسية الذكية</title>
+    
+    <!-- إعدادات SEO لمحركات البحث -->
+    <meta name="description" content="منصة Solar Tools Pro المهنية لحساب وتصميم منظومات الطاقة الشمسية الذكية، حساب الألواح المطلوبة، وسعة بطاريات الليثيوم والجل وزمن التشغيل بدقة عالية.">
+    <meta name="keywords" content="حاسبة الطاقة الشمسية, حساب أحمال الطاقة الشمسية, حاسبة الألواح الشمسية, حاسبة البطارية, طاقة شمسية اليمن, حساب الكابلات الشمسية, Solar Tools Pro, Smart Solar Calculator">
+    <meta name="author" content="مازن العوذلي">
+    
+    <meta property="og:title" content="Solar Tools Pro | منصة أدوات الطاقة الشمسية الذكية">
+    <meta property="og:description" content="أدوات تفاعلية احترافية ومقالات هندسية لتصميم وحساب منظومات الطاقة الشمسية ومكوناتها.">
+    <meta property="og:image" content="https://solartoolspro.com/preview.png">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://solartoolspro.com/">
+
+    <!-- البيانات المهيكلة لش Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Solar Tools Pro",
+      "url": "https://solartoolspro.com/",
+      "description": "المنصة الهندسية المتكاملة لحساب وتصميم منظومات الطاقة الشمسية وأدوات البطاريات والألواح.",
+      "author": {
+        "@type": "Person",
+        "name": "مازن العوذلي"
+      }
+    }
+    </script>
+
+    <!-- الأيقونات والـ PWA -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0f172a">
+
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #0f172a; 
+            color: #e2e8f0; 
+            margin: 0; 
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.95)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
+            border-bottom: 1px solid #334155;
+            padding: 40px 20px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lang-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            transition: 0.2s;
+        }
+        [dir="ltr"] .lang-btn { left: auto; right: 20px; }
+        .lang-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+        h1.site-title {
+            font-size: 28px;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        p.site-subtitle {
+            font-size: 15px;
+            color: #10b981;
+            margin: 0 auto;
+            max-width: 600px;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            color: #ffffff;
+            margin: 0 0 8px 0;
+        }
+
+        .section-header p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        /* شبكة كروت الأدوات */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .tool-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #10b981;
+            box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.15);
+        }
+
+        .card-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 8px 0;
+        }
+
+        .card-brief {
+            font-size: 13.5px;
+            color: #10b981;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+
+        .card-desc {
+            font-size: 13.5px;
+            color: #cbd5e1;
+            margin: 0 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .card-features-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #f59e0b;
+            margin: 0 0 8px 0;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            font-size: 12.5px;
+            color: #94a3b8;
+        }
+
+        .card-features li {
+            position: relative;
+            padding-inline-start: 18px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .card-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        [dir="rtl"] .card-features li::before {
+            left: auto;
+            right: 0;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-calc { background-color: #059669; color: #ffffff; }
+        .btn-calc:hover { background-color: #10b981; }
+
+        .btn-panels { background-color: #0284c7; color: #ffffff; }
+        .btn-panels:hover { background-color: #0369a1; }
+
+        .btn-battery { background-color: #0f172a; color: #10b981; border: 1px solid #10b981; }
+        .btn-battery:hover { background-color: rgba(16, 185, 129, 0.1); }
+
+        /* قسم المقالات والشروحات */
+        .articles-section {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .article-block {
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #334155;
+            padding-bottom: 25px;
+        }
+
+        .article-block:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .article-title {
+            font-size: 18px;
+            color: #10b981;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+
+        .article-text {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin: 0 0 12px 0;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #0f172a;
+            border-top: 1px solid #334155;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 12px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #10b981;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <div class="header-container">
+            <h1 class="site-title" data-i18n="mainTitle">Solar Tools Pro ☀️</h1>
+            <p class="site-subtitle" data-i18n="mainSubtitle">المنصة الهندسية الشاملة لتصميم وحساب منظومات الطاقة الشمسية والبطاريات</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-header">
+            <h2 data-i18n="toolsTitle">🛠️ أدواتنا الحسابية التفاعلية</h2>
+            <p data-i18n="toolsSubtitle">اختر الأداة المناسبة لاحتياجاتك للحصول على نتائج هندسية دقيقة وموثوقة</p>
+        </section>
+
+        <!-- كروت الأدوات الثلاث بالتفاصيل الكاملة -->
+        <div class="tools-grid">
+            
+            <!-- الحاسبة الرئيسية -->
+            <div class="tool-card">
+                <div>
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title" data-i18n="c1Title">حاسبة الطاقة الشمسية الذكية</h3>
+                    <p class="card-brief" data-i18n="c1Brief">أداة هندسية متكاملة لتصميم واحتساب أنظمة الطاقة الشمسية والأحمال الميدانية.</p>
+                    <p class="card-desc" data-i18n="c1Desc">حاسبة الطاقة الشمسية الذكية هي أداة هندسية احترافية عالية الدقة، صُممت لمساعدة المهندسين، الفنيين، والمستخدمين في تصميم واختبار أنظمة الطاقة الشمسية بكفاءة وموثوقية عالية.</p>
+                    
+                    <div class="card-features-title" data-i18n="c1FeatTitle">أبرز مميزات التطبيق:</div>
+                    <ul class="card-features">
+                        <li data-i18n="c1f1">العمل بدون إنترنت (Offline Mode): إتمام جميع الحسابات الميدانية في المواقع النائية دون الحاجة لاتصال بالشبكة.</li>
+                        <li data-i18n="c1f2">حسابات الأحمال والبطاريات: تحديد دقيق لسعة بطاريات الليثيوم والرصاص (Ah / kWh) مع مراعاة عمق التفريغ (DoD).</li>
+                        <li data-i18n="c1f3">دعم الأنظمة الهجينة (Hybrid Systems): حساب سعة الإنفرترات، وتحديد تيار منظم الشحن (MPPT)، وتنسيق التغذية مع المولد أو الشبكة العامة.</li>
+                        <li data-i18n="c1f4">قسم المشاريع التجارية والكبرى (Enterprise): دعم أنظمة الجهد العالي (High Voltage - HV) والأنظمة ثلاثية الأطوار (3-Phase) وتوزيع العواكس بالتوازي.</li>
+                        <li data-i18n="c1f5">حساب الكابلات وقواطع الحماية (DC/AC): تقدير مقاسات السلك النحاسي وأحجام القواطع القياسية بناءً على المسافات والظروف المناخية.</li>
+                        <li data-i18n="c1f6">تصدير تقارير فنية PDF: طباعة تقرير هندسي متكامل وموثق باسم المهندس والعميل بضغطة زر.</li>
+                        <li data-i18n="c1f7">واجهة ثنائية اللغة: دعم كامل للغتين العربية والإنجليزية بمرونة عالية.</li>
+                    </ul>
+                </div>
+                <a href="https://calc.solartoolspro.com" target="_blank" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ➔</a>
+            </div>
+
+            <!-- حاسبة الألواح -->
+            <div class="tool-card">
+                <div>
+                    <div class="card-icon">☀️</div>
+                    <h3 class="card-title" data-i18n="c2Title">حاسبة الألواح الشمسية</h3>
+                    <p class="card-brief" data-i18n="c2Brief">أداة هندسية متخصصة لحساب القدرة الإجمالية وعدد الألواح الشمسية المطلوبة لشحن البطاريات.</p>
+                    <p class="card-desc" data-i18n="c2Desc">صُمم تطبيق "حاسبة الألواح الشمسية" لتزويد المهندسين، الفنيين، والمستخدمين بالتقدير العلمي والدقيق لمصفوفات التوليد الشمسية والقدرة المطلوبة (بالواط) لإتمام عملية شحن البطاريات بنجاح وبكفاءة عالية.</p>
+                    
+                    <div class="card-features-title" data-i18n="c2FeatTitle">أبرز مميزات التطبيق:</div>
+                    <ul class="card-features">
+                        <li data-i18n="c2f1">مرونة وحدات القياس (kWh / Wh / Ah): إمكانية إدخال سعة البطاريات بالوحدة المفضلة لديك سواءً بالكيلوواط (kWh)، أو الواط (Wh)، أو الأمبير-ساعة (Ah) مع ربط ديناميكي بجهد المنظومة.</li>
+                        <li data-i18n="c2f2">حساب دقيق لعدد الألواح: تحديد العدد الفعلي للألواح الشمسية اللازمة لشحن بطارية واحدة أو بنك بطاريات بالكامل.</li>
+                        <li data-i18n="c2f3">الربط مع نسبة تفريغ البطارية (DoD): مراعاة نسبة التفريغ الفعلي (مثل 80% أو 90% أو التفريغ الجزئي)؛ حيث يتكيف عدد الألواح المطلوبة آلياً تبعاً لكمية الطاقة المسحوبة والمراد إعادة تعويضها.</li>
+                        <li data-i18n="c2f4">تحديد القدرة الإجمالية (بالواط): احتساب القدرة بالواط لتأمين تيار الشحن المناسب لمنظم الشحن (MPPT) وساعات ذروة الشمس المتاحة.</li>
+                        <li data-i18n="c2f5">العمل بدون إنترنت (Offline First): واجهة بسيطة وخفيفة تعمل بالكامل دون الحاجة لاتصال بالإنترنت باللغتين العربية والإنجليزية.</li>
+                    </ul>
+                </div>
+                <a href="https://panels.solartoolspro.com" target="_blank" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ➔</a>
+            </div>
+
+            <!-- حاسبة البطارية -->
+            <div class="tool-card">
+                <div>
+                    <div class="card-icon">🔋</div>
+                    <h3 class="card-title" data-i18n="c3Title">حاسبة ومراقب البطارية</h3>
+                    <p class="card-brief" data-i18n="c3Brief">أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.</p>
+                    <p class="card-desc" data-i18n="c3Desc">تطبيق "حاسبة ومراقب البطارية" هو حليفك الميداني المتخصص لحساب وتقييم أداء بنوك البطاريات لمنظومات الطاقة الشمسية والأجهزة الكهربائية بدقة عالية.</p>
+                    
+                    <div class="card-features-title" data-i18n="c3FeatTitle">أبرز مميزات التطبيق:</div>
+                    <ul class="card-features">
+                        <li data-i18n="c3f1">حساب السعة الفعلية: تحديد السعة المطلوبة بدقة بالأمبير-ساعة (Ah) والكيلوواط-ساعة (kWh) لبطاريات الليثيوم والرصاص.</li>
+                        <li data-i18n="c3f2">إدارة عمق التفريغ الآمن (DoD): حماية البطاريات من التفريغ العميق وضمان ضبط مستويات الشحن الآمنة لإطالة العمر الافتراضي.</li>
+                        <li data-i18n="c3f3">تقدير زمن التشغيل: حساب الزمن المتبقي لتشغيل الأحمال الكهربائية الموصلة بناءً على معدل الاستهلاك الميداني.</li>
+                        <li data-i18n="c3f4">العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.</li>
+                    </ul>
+                </div>
+                <a href="https://battery.solartoolspro.com" target="_blank" class="card-btn btn-battery" data-i18n="c3Btn">دخول حاسبة البطارية ➔</a>
+            </div>
+
+        </div>
+
+        <!-- المقالات الهندسية (Google AdSense & SEO) -->
+        <section class="articles-section">
+            <div class="section-header">
+                <h2 data-i18n="artHeader">📚 الدليل الهندسي وشروحات الطاقة الشمسية</h2>
+                <p data-i18n="artSub">مقالات وإرشادات هندسية لمساعدتك في تصميم منظومات طاقة شمسية آمنة ومستقرة</p>
+            </div>
+
+            <div class="article-block">
+                <h3 class="article-title" data-i18n="a1Title">1. كيفية حساب الأحمال الكهربائية واختيار سعة الإنفرتر المناسب</h3>
+                <p class="article-text" data-i18n="a1Text">
+                    تعتمد الخطوة الأولى في تصميم أي منظومة طاقة شمسية على التقييم الدقيق للأحمال الكهربائية. يتم ذلك بحساب القدرة المستمرة بالواط (Watt) وقدرة الإقلاع (Surge Power) للمحركات والأجهزة الثقيلة مثل الثلاجات والمضخات. يجب اختيار إنفرتر يغطي إجمالي الأحمال المستمرة مع هامش أمان لا يقل عن 20%، بالإضافة إلى القدرة على تحمل تيارات البدء اللحظية دون حدوث فصل أو إجهاد إلكتروني.
+                </p>
+            </div>
+
+            <div class="article-block">
+                <h3 class="article-title" data-i18n="a2Title">2. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)</h3>
+                <p class="article-text" data-i18n="a2Text">
+                    تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.
+                </p>
+            </div>
+
+            <div class="article-block">
+                <h3 class="article-title" data-i18n="a3Title">3. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات</h3>
+                <p class="article-text" data-i18n="a3Text">
+                    تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
+        <div class="footer-links">
+            <a href="https://calc.solartoolspro.com" target="_blank" data-i18n="fl1">الحاسبة الذكية</a> |
+            <a href="https://panels.solartoolspro.com" target="_blank" data-i18n="fl2">حاسبة الألواح</a> |
+            <a href="https://battery.solartoolspro.com" target="_blank" data-i18n="fl3">حاسبة البطارية</a>
+        </div>
+    </footer>
+
+    <script>
+        const dict = {
+            ar: {
+                mainTitle: "Solar Tools Pro ☀️",
+                mainSubtitle: "المنصة الهندسية الشاملة لتصميم وحساب منظومات الطاقة الشمسية والبطاريات",
+                toolsTitle: "🛠️ أدواتنا الحسابية التفاعلية",
+                toolsSubtitle: "اختر الأداة المناسبة لاحتياجاتك للحصول على نتائج هندسية دقيقة وموثوقة",
+                
+                c1Title: "حاسبة الطاقة الشمسية الذكية",
+                c1Brief: "أداة هندسية متكاملة لتصميم واحتساب أنظمة الطاقة الشمسية والأحمال الميدانية.",
+                c1Desc: "حاسبة الطاقة الشمسية الذكية هي أداة هندسية احترافية عالية الدقة، صُممت لمساعدة المهندسين، الفنيين، والمستخدمين في تصميم واختبار أنظمة الطاقة الشمسية بكفاءة وموثوقية عالية.",
+                c1FeatTitle: "أبرز مميزات التطبيق:",
+                c1f1: "العمل بدون إنترنت (Offline Mode): إتمام جميع الحسابات الميدانية في المواقع النائية دون الحاجة لاتصال بالشبكة.",
+                c1f2: "حسابات الأحمال والبطاريات: تحديد دقيق لسعة بطاريات الليثيوم والرصاص (Ah / kWh) مع مراعاة عمق التفريغ (DoD).",
+                c1f3: "دعم الأنظمة الهجينة (Hybrid Systems): حساب سعة الإنفرترات، وتحديد تيار منظم الشحن (MPPT)، وتنسيق التغذية مع المولد أو الشبكة العامة.",
+                c1f4: "قسم المشاريع التجارية والكبرى (Enterprise): دعم أنظمة الجهد العالي (High Voltage - HV) والأنظمة ثلاثية الأطوار (3-Phase) وتوزيع العواكس بالتوازي.",
+                c1f5: "حساب الكابلات وقواطع الحماية (DC/AC): تقدير مقاسات السلك النحاسي وأحجام القواطع القياسية بناءً على المسافات والظروف المناخية.",
+                c1f6: "تصدير تقارير فنية PDF: طباعة تقرير هندسي متكامل وموثق باسم المهندس والعميل بضغطة زر.",
+                c1f7: "واجهة ثنائية اللغة: دعم كامل للغتين العربية والإنجليزية بمرونة عالية.",
+                c1Btn: "دخول الحاسبة الذكية ➔",
+
+                c2Title: "حاسبة الألواح الشمسية",
+                c2Brief: "أداة هندسية متخصصة لحساب القدرة الإجمالية وعدد الألواح الشمسية المطلوبة لشحن البطاريات.",
+                c2Desc: "صُمم تطبيق \"حاسبة الألواح الشمسية\" لتزويد المهندسين، الفنيين، والمستخدمين بالتقدير العلمي والدقيق لمصفوفات التوليد الشمسية والقدرة المطلوبة (بالواط) لإتمام عملية شحن البطاريات بنجاح وبكفاءة عالية.",
+                c2FeatTitle: "أبرز مميزات التطبيق:",
+                c2f1: "مرونة وحدات القياس (kWh / Wh / Ah): إمكانية إدخال سعة البطاريات بالوحدة المفضلة لديك سواءً بالكيلوواط (kWh)، أو الواط (Wh)، أو الأمبير-ساعة (Ah) مع ربط ديناميكي بجهد المنظومة.",
+                c2f2: "حساب دقيق لعدد الألواح: تحديد العدد الفعلي للألواح الشمسية اللازمة لشحن بطارية واحدة أو بنك بطاريات بالكامل.",
+                c2f3: "الربط مع نسبة تفريغ البطارية (DoD): مراعاة نسبة التفريغ الفعلي (مثل 80% أو 90% أو التفريغ الجزئي)؛ حيث يتكيف عدد الألواح المطلوبة آلياً تبعاً لكمية الطاقة المسحوبة والمراد إعادة تعويضها.",
+                c2f4: "تحديد القدرة الإجمالية (بالواط): احتساب القدرة بالواط لتأمين تيار الشحن المناسب لمنظم الشحن (MPPT) وساعات ذروة الشمس المتاحة.",
+                c2f5: "العمل بدون إنترنت (Offline First): واجهة بسيطة وخفيفة تعمل بالكامل دون الحاجة لاتصال بالإنترنت باللغتين العربية والإنجليزية.",
+                c2Btn: "دخول حاسبة الألواح ➔",
+
+                c3Title: "حاسبة ومراقب البطارية",
+                c3Brief: "أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.",
+                c3Desc: "تطبيق \"حاسبة ومراقب البطارية\" هو حليفك الميداني المتخصص لحساب وتقييم أداء بنوك البطاريات لمنظومات الطاقة الشمسية والأجهزة الكهربائية بدقة عالية.",
+                c3FeatTitle: "أبرز مميزات التطبيق:",
+                c3f1: "حساب السعة الفعلية: تحديد السعة المطلوبة بدقة بالأمبير-ساعة (Ah) والكيلوواط-ساعة (kWh) لبطاريات الليثيوم والرصاص.",
+                c3f2: "إدارة عمق التفريغ الآمن (DoD): حماية البطاريات من التفريغ العميق وضمان ضبط مستويات الشحن الآمنة لإطالة العمر الافتراضي.",
+                c3f3: "تقدير زمن التشغيل: حساب الزمن المتبقي لتشغيل الأحمال الكهربائية الموصلة بناءً على معدل الاستهلاك الميداني.",
+                c3f4: "العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.",
+                c3Btn: "دخول حاسبة البطارية ➔",
+
+                artHeader: "📚 الدليل الهندسي وشروحات الطاقة الشمسية",
+                artSub: "مقالات وإرشادات هندسية لمساعدتك في تصميم منظومات طاقة شمسية آمنة ومستقرة",
+                a1Title: "1. كيفية حساب الأحمال الكهربائية واختيار سعة الإنفرتر المناسب",
+                a1Text: "تعتمد الخطوة الأولى في تصميم أي منظومة طاقة شمسية على التقييم الدقيق للأحمال الكهربائية. يتم ذلك بحساب القدرة المستمرة بالواط (Watt) وقدرة الإقلاع (Surge Power) للمحركات والأجهزة الثقيلة مثل الثلاجات والمضخات. يجب اختيار إنفرتر يغطي إجمالي الأحمال المستمرة مع هامش أمان لا يقل عن 20%، بالإضافة إلى القدرة على تحمل تيارات البدء اللحظية دون حدوث فصل أو إجهاد إلكتروني.",
+                a2Title: "2. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)",
+                a2Text: "تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.",
+                a3Title: "3. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات",
+                a3Text: "تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.",
+                copyright: "تصميم وتطوير <strong style=\"color:#10b981;\">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة",
+                fl1: "الحاسبة الذكية", fl2: "حاسبة الألواح", fl3: "حاسبة البطارية"
+            },
+            en: {
+                mainTitle: "Solar Tools Pro ☀️",
+                mainSubtitle: "Comprehensive Engineering Platform for Solar Systems & Battery Design",
+                toolsTitle: "🛠️ Interactive Engineering Tools",
+                toolsSubtitle: "Select the appropriate tool for accurate and reliable engineering results",
+                
+                c1Title: "Smart Solar System Calculator",
+                c1Brief: "Comprehensive engineering tool for designing and calculating solar systems and field loads.",
+                c1Desc: "Smart Solar Calculator is a professional high-precision tool designed to help engineers, technicians, and users size and evaluate solar systems efficiently and reliably.",
+                c1FeatTitle: "Key Features:",
+                c1f1: "Offline Mode: Perform all field calculations in remote locations without network connection.",
+                c1f2: "Load & Battery Sizing: Accurate capacity sizing for Lithium and Lead-Acid batteries (Ah / kWh) considering DoD.",
+                c1f3: "Hybrid Systems Support: Calculate inverter capacity, MPPT charge controller current, and generator/grid sync.",
+                c1f4: "Commercial & Enterprise Section: High Voltage (HV) support, 3-Phase systems, and parallel inverters setup.",
+                c1f5: "Cable & Breaker Sizing (DC/AC): Copper cable gauge and breaker sizing based on distances and climate.",
+                c1f6: "PDF Technical Reports: Export detailed engineering reports with engineer and client names instantly.",
+                c1f7: "Bilingual Interface: Complete support for both Arabic and English.",
+                c1Btn: "Open Smart Calculator ➔",
+
+                c2Title: "Solar Panels Calculator",
+                c2Brief: "Specialized tool to calculate total required wattage and panel count for battery charging.",
+                c2Desc: "Designed to provide engineers, technicians, and users with precise scientific estimation for solar PV arrays required to fully charge battery banks.",
+                c2FeatTitle: "Key Features:",
+                c2f1: "Flexible Units (kWh / Wh / Ah): Input battery capacity in your preferred unit linked dynamically with system voltage.",
+                c2f2: "Accurate Panel Count: Determine actual PV panel count needed for single batteries or full banks.",
+                c2f3: "Integrated DoD Rate: Accounts for actual discharge percentage (e.g., 80% or 90%) adapting panel count automatically.",
+                c2f4: "Total Power Calculation (Watt): Calculates required power for MPPT charge current and peak sun hours.",
+                c2f5: "Offline First: Lightweight interface working fully offline in Arabic and English.",
+                c2Btn: "Open Panels Calculator ➔",
+
+                c3Title: "Battery Calculator & Monitor",
+                c3Brief: "Precise engineering tool for battery capacity sizing, discharge monitoring, and safe DoD levels.",
+                c3Desc: "Your specialized field companion to evaluate and monitor battery bank performance for solar systems and electrical appliances accurately.",
+                c3FeatTitle: "Key Features:",
+                c3f1: "Usable Capacity Calculation: Precise Ah and kWh capacity sizing for Lithium and Lead-Acid batteries.",
+                c3f2: "Safe DoD Management: Protects batteries from deep discharge ensuring optimal lifespan.",
+                c3f3: "Runtime Estimator: Calculates remaining runtime for connected loads based on actual consumption.",
+                c3f4: "Offline Capability: Instant calculations in remote locations with a fast bilingual interface.",
+                c3Btn: "Open Battery Calculator ➔",
+
+                artHeader: "📚 Engineering Guide & Solar Articles",
+                artSub: "Articles and guidelines to assist you in designing safe and efficient solar power systems",
+                a1Title: "1. Load Sizing & Inverter Capacity Selection",
+                a1Text: "The first step in solar system design is assessing electrical loads. Calculate total continuous power (Watt) and surge power for inductive loads like refrigerators and pumps. Choose an inverter covering continuous load with a 20% safety margin and sufficient surge capacity.",
+                a2Title: "2. Lithium Battery Sizing & Safe Depth of Discharge (DoD)",
+                a2Text: "LiFePO4 lithium batteries offer high efficiency and long cycle life compared to Gel/Lead-Acid. To maximize lifespan, set safe Depth of Discharge (DoD) to 80%. Sizing capacity in Ah or kWh ensures reliable power supply during night hours.",
+                a3Title: "3. Temperature Effects on Solar Panels & Cable Sizing",
+                a3Text: "High temperatures in hot regions reduce solar panel output by up to 15% due to thermal coefficients. Temperature also increases cable resistance, requiring larger copper cross-sections (mm²) to limit voltage drop and thermal strain.",
+                copyright: "Designed & Developed by <strong style=\"color:#10b981;\">Mazen Alawdhali</strong> &copy; 2026 All Rights Reserved",
+                fl1: "Smart Calculator", fl2: "Panels Calculator", fl3: "Battery Calculator"
+            }
+        };
+
+        let currentLang = localStorage.getItem('stp_main_lang') || 'ar';
+
+        function toggleLang() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('stp_main_lang', currentLang);
+            applyLang();
+        }
+
+        function applyLang() {
+            const t = dict[currentLang];
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('langBtn').innerText = currentLang === 'ar' ? 'EN' : 'AR';
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(t[key]) el.innerHTML = t[key];
+            });
+        }
+
+        applyLang();
+    </script>
+</body>
+</html>
