@@ -152,7 +152,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .tool-card {
@@ -266,39 +266,43 @@
         .btn-battery { background-color: #0f172a; color: #10b981; border: 1.5px solid #10b981; }
         .btn-battery:hover { background-color: rgba(16, 185, 129, 0.15); }
 
-        .articles-section {
-            background-color: #1e293b;
-            border: 1px solid #334155;
+        /* بنر المدونة البارز */
+        .blog-cta-banner {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1.5px solid #10b981;
             border-radius: 20px;
             padding: 30px;
-            margin-bottom: 40px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
-
-        .article-block {
-            margin-bottom: 30px;
-            border-bottom: 1px dashed #334155;
-            padding-bottom: 25px;
-        }
-
-        .article-block:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .article-title {
-            font-size: 18px;
-            color: #34d399;
-            margin: 0 0 12px 0;
+        .blog-cta-banner h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 10px;
             font-weight: 800;
         }
-
-        .article-text {
+        .blog-cta-banner p {
             font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        .blog-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #059669, #10b981);
             color: #ffffff;
-            margin: 0 0 12px 0;
-            text-align: justify;
-            line-height: 1.75;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
+            transition: transform 0.2s;
+        }
+        .blog-cta-btn:hover {
+            transform: translateY(-3px);
         }
 
         footer {
@@ -308,6 +312,7 @@
             padding: 35px 20px;
             font-size: 14px;
             color: #ffffff;
+            margin-top: 40px;
         }
 
         .footer-nav {
@@ -439,47 +444,14 @@
 
         </div>
 
-        <section class="articles-section">
-            <div class="section-header">
-                <h2 data-i18n="artHeader">📚 الدليل الهندسي وشروحات الطاقة الشمسية</h2>
-                <p data-i18n="artSub">مقالات وإرشادات هندسية لمساعدتك في تصميم منظومات طاقة شمسية آمنة ومستقرة</p>
-            </div>
-
-            <div class="article-block">
-                <h3 class="article-title" data-i18n="a1Title">1. كيفية حساب الأحمال الكهربائية واختيار سعة الإنفرتر المناسب</h3>
-                <p class="article-text" data-i18n="a1Text">
-                    تعتمد الخطوة الأولى في تصميم أي منظومة طاقة شمسية على التقييم الدقيق للأحمال الكهربائية. يتم ذلك بحساب القدرة المستمرة بالواط (Watt) وقدرة الإقلاع (Surge Power) للمحركات والأجهزة الثقيلة مثل الثلاجات والمضخات. يجب اختيار إنفرتر يغطي إجمالي الأحمال المستمرة مع هامش أمان لا يقل عن 20%، بالإضافة إلى القدرة على تحمل تيارات البدء اللحظية دون حدوث فصل أو إجهاد إلكتروني.
-                </p>
-            </div>
-
-            <div class="article-block">
-                <h3 class="article-title" data-i18n="a2Title">2. حساب قدرة الألواح الشمسية وتحديد العدد المناسب لتغطية الأحمال والشحن</h3>
-                <p class="article-text" data-i18n="a2Text">
-                    لتحديد حجم مصفوفة التوليد الشمسي بدقة، يجب مراعاة قدرة الألواح على تغطية الأحمال الكهربائية المباشرة خلال النهار بالإضافة إلى الطاقة المطلوبة لإعادة شحن بنك البطاريات بالكامل. يتم حساب إجمالي الاستهلاك بالكيلوواط-ساعة (kWh) وقسمته على ساعات ذروة الشمس (Peak Sun Hours) مع إضافة مفقودات المنظومة (15-20%). يُراعي التنبيه الدقيق لاختيار العدد الفعلي المناسب من الألواح وتوزيعها لتجنب عجز التوليد الشمسي أو إجهاد البطاريات.
-                </p>
-            </div>
-
-            <div class="article-block">
-                <h3 class="article-title" data-i18n="a3Title">3. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)</h3>
-                <p class="article-text" data-i18n="a3Text">
-                    تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.
-                </p>
-            </div>
-
-            <div class="article-block">
-                <h3 class="article-title" data-i18n="a4Title">4. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات</h3>
-                <p class="article-text" data-i18n="a4Text">
-                    تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.
-                </p>
-            </div>
-
-            <!-- بنر التحويل المباشر لمدونة المقالات -->
-            <div style="margin: 25px auto 10px auto; text-align: center;">
-                <a href="https://blog.solartoolspro.com" target="_blank" style="display: block; background: linear-gradient(135deg, #059669, #10b981); color: #ffffff; text-decoration: none; padding: 16px 20px; border-radius: 16px; font-size: 15px; font-weight: 800; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3); transition: transform 0.2s, box-shadow 0.2s; line-height: 1.6;" data-i18n="blogBanner">
-                    ⚡ لمشاهدة المزيد من مقالات الطاقة الشمسية ومكوناتها وأخبارها اضغط هنا
-                </a>
-            </div>
-        </section>
+        <!-- بنر الانتقال إلى مدونة المقالات الفرعية -->
+        <div class="blog-cta-banner">
+            <h3 data-i18n="blogCtaTitle">📚 هل تبحث عن المقالات والدراسات الهندسية؟</h3>
+            <p data-i18n="blogCtaSub">تفضل بزيارة مدونتنا الرسمية للاطلاع على أحدث الشروحات والأخبار والمقالات الفنية.</p>
+            <a href="https://blog.solartoolspro.com" target="_blank" class="blog-cta-btn" data-i18n="blogCtaBtn">
+                ⚡ تصفح مدونة المقالات والطاقة الشمسية ➔
+            </a>
+        </div>
 
     </main>
 
@@ -539,17 +511,10 @@
                 c3f4: "العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.",
                 c3Btn: "دخول حاسبة البطارية ➔",
 
-                artHeader: "📚 الدليل الهندسي وشروحات الطاقة الشمسية",
-                artSub: "مقالات وإرشادات هندسية لمساعدتك في تصميم منظومات طاقة شمسية آمنة ومستقرة",
-                a1Title: "1. كيفية حساب الأحمال الكهربائية واختيار سعة الإنفرتر المناسب",
-                a1Text: "تعتمد الخطوة الأولى في تصميم أي منظومة طاقة شمسية على التقييم الدقيق للأحمال الكهربائية. يتم ذلك بحساب القدرة المستمرة بالواط (Watt) وقدرة الإقلاع (Surge Power) للمحركات والأجهزة الثقيلة مثل الثلاجات والمضخات. يجب اختيار إنفرتر يغطي إجمالي الأحمال المستمرة مع هامش أمان لا يقل عن 20%، بالإضافة إلى القدرة على تحمل تيارات البدء اللحظية دون حدوث فصل أو إجهاد إلكتروني.",
-                a2Title: "2. حساب قدرة الألواح الشمسية وتحديد العدد المناسب لتغطية الأحمال والشحن",
-                a2Text: "لتحديد حجم مصفوفة التوليد الشمسي بدقة، يجب مراعاة قدرة الألواح على تغطية الأحمال الكهربائية المباشرة خلال النهار بالإضافة إلى الطاقة المطلوبة لإعادة شحن بنك البطاريات بالكامل. يتم حساب إجمالي الاستهلاك بالكيلوواط-ساعة (kWh) وقسمته على ساعات ذروة الشمس (Peak Sun Hours) مع إضافة مفقودات المنظومة (15-20%). يُراعي التنبيه الدقيق لاختيار العدد الفعلي المناسب من الألواح وتوزيعها لتجنب عجز التوليد الشمسي أو إجهاد البطاريات.",
-                a3Title: "3. الموازنة بين سعة بطاريات الليثيوم ونسبة التفريغ الآمنة (DoD)",
-                a3Text: "تتميز بطاريات الليثيوم (LiFePO4) بكفاءة تفريغ عالية وعمر افتراضي طويل مقارنة ببطاريات الجل والرصاص. للحفاظ على عمر البطارية وتجنب التدهور السريع، يُوصى بضبط عمق التفريغ الآمن (Depth of Discharge - DoD) عند 80%. حساب السعة الفعلية بالأمبير-ساعة (Ah) أو الكيلوواط-ساعة (kWh) يضمن استمرارية التغذية الكهربائية خلال فترات غياب الشمس والليل.",
-                a4Title: "4. تأثير درجة الحرارة والمناخ على أداء الألواح ومقاطع الكابلات",
-                a4Text: "تؤدي درجات الحرارة العالية في المناطق الصحراوية والساحلية إلى خفض إنتاجية الألواح الشمسية بنسبة تصل إلى 15% بسبب المعامل الحراري. كما تزيد الحرارة من المقاومة الكهربائية للكابلات، مما يتطلب زيادة مقطع النحاس (mm²) واختيار قواطع مناسبة لتفادي هبوط الجهد (Voltage Drop) وارتفاع حرارة الموصلات.",
-                blogBanner: "⚡ لمشاهدة المزيد من مقالات الطاقة الشمسية ومكوناتها وأخبارها اضغط هنا",
+                blogCtaTitle: "📚 هل تبحث عن المقالات والدراسات الهندسية؟",
+                blogCtaSub: "تفضل بزيارة مدونتنا الرسمية للاطلاع على أحدث الشروحات والأخبار والمقالات الفنية.",
+                blogCtaBtn: "⚡ تصفح مدونة المقالات والطاقة الشمسية ➔",
+
                 privacyPolicy: "سياسة الخصوصية",
                 aboutUs: "نبذة عنا",
                 contactUs: "اتصل بنا",
@@ -596,17 +561,10 @@
                 c3f4: "Offline Capability: Instant calculations in remote locations with a fast bilingual interface.",
                 c3Btn: "Open Battery Calculator ➔",
 
-                artHeader: "📚 Engineering Guide & Solar Articles",
-                artSub: "Articles and guidelines to assist you in designing safe and efficient solar power systems",
-                a1Title: "1. Load Sizing & Inverter Capacity Selection",
-                a1Text: "The first step in solar system design is assessing electrical loads. Calculate total continuous power (Watt) and surge power for inductive loads like refrigerators and pumps. Choose an inverter covering continuous load with a 20% safety margin and sufficient surge capacity.",
-                a2Title: "2. Solar PV Wattage & Proper Panel Count Sizing for Loads & Charging",
-                a2Text: "To size the PV array accurately, factor in daytime direct electrical load power alongside energy needed to fully recharge battery banks. Divide daily consumption in kWh by peak sun hours (PSH) with 15-20% system losses. Selecting the appropriate actual panel count avoids power deficits and battery stress.",
-                a3Title: "3. Lithium Battery Sizing & Safe Depth of Discharge (DoD)",
-                a3Text: "LiFePO4 lithium batteries offer high efficiency and long cycle life compared to Gel/Lead-Acid. To maximize lifespan, set safe Depth of Discharge (DoD) to 80%. Sizing capacity in Ah or kWh ensures reliable power supply during night hours.",
-                a4Title: "4. Temperature Effects on Solar Panels & Cable Sizing",
-                a4Text: "High temperatures in hot regions reduce solar panel output by up to 15% due to thermal coefficients. Temperature also increases cable resistance, requiring larger copper cross-sections (mm²) to limit voltage drop and thermal strain.",
-                blogBanner: "⚡ Click here to view more solar energy articles, components & news",
+                blogCtaTitle: "📚 Looking for Engineering Articles & Guides?",
+                blogCtaSub: "Visit our official blog to explore the latest technical explanations, news, and guides.",
+                blogCtaBtn: "⚡ Browse Solar Articles Blog ➔",
+
                 privacyPolicy: "Privacy Policy",
                 aboutUs: "About Us",
                 contactUs: "Contact Us",
