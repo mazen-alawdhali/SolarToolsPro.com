@@ -578,7 +578,7 @@
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
             localStorage.setItem('stp_main_lang', currentLang);
-            // تسجيل الـ Service Worker للنطاق الرئيسي للعمل أوفلاين         if ('serviceWorker' in navigator) {             window.addEventListener('load', () => {                 navigator.serviceWorker.register('/sw.js', { scope: '/' })                     .then(reg => console.log('ServiceWorker registered with scope:', reg.scope))                     .catch(err => console.log('ServiceWorker registration failed:', err));             });         }          applyLang();
+            applyLang();
         }
 
         function applyLang() {
@@ -599,7 +599,7 @@
             window.open(targetUrl, '_blank');
         }
 
-        // تسجيل الـ Service Worker للعمل بدون إنترنت if ('serviceWorker' in navigator) {     window.addEventListener('load', () => {         navigator.serviceWorker.register('sw.js').catch(() => {});     }); }  applyLang();
+        applyLang();
     </script>
 </body>
 </html>
