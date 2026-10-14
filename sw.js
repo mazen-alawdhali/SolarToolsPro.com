@@ -1,10 +1,10 @@
-const CACHE_NAME = 'solartools-home-v4';
+const CACHE_NAME = 'solartools-home-v5';
 const assetsToCache = [
-    '/',
-    '/index.html',
-    '/site.webmanifest',
-    '/header_balanced_sky_600w.webp',
-    '/preview_v2.png'
+    './',
+    './index.html',
+    './site.webmanifest',
+    './header_balanced_sky_600w.webp',
+    './preview_v2.png'
 ];
 
 self.addEventListener('install', event => {
@@ -32,7 +32,7 @@ self.addEventListener('fetch', event => {
         caches.match(event.request).then(response => {
             return response || fetch(event.request).catch(() => {
                 if (event.request.mode === 'navigate') {
-                    return caches.match('/index.html');
+                    return caches.match('./index.html');
                 }
             });
         })
