@@ -1,6 +1,6 @@
 {
-  "name": "Solar Tools Pro",
-  "short_name": "Solar Tools Pro",
+  "name": "منصة أدوات الطاقة الشمسية الإحترافية",
+  "short_name": "أدوات الطاقة الشمسية",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
