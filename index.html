@@ -58,9 +58,9 @@
             line-height: 1.7;
         }
 
-        /* تحجيم الهيدر العلوي ليكون أكثر انضغاطاً وأناقة */
+        /* الهيدر بنقائه الأصلي دون إعتام ثقيل للصورة */
         header {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.45), rgba(30, 41, 59, 0.55)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.25), rgba(30, 41, 59, 0.35)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
             border-bottom: 1px solid #334155;
             padding: 25px 15px 20px;
             text-align: center;
@@ -92,13 +92,21 @@
         [dir="ltr"] .lang-btn { left: auto; right: 14px; }
         .lang-btn:hover { background: rgba(255, 255, 255, 0.25); }
 
+        /* إطار زجاجي شفاف يجمع الأيقونة والعنوان الرئيسي والفرعي لضمان الوضوح التام */
         .site-title-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 6px;
-            margin-bottom: 6px;
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 16px 14px;
+            margin: 0 auto;
+            max-width: 600px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .main-logo-icon {
@@ -106,7 +114,7 @@
         }
 
         h1.site-title {
-            font-size: 24px;
+            font-size: 23px;
             font-weight: 900;
             color: #ffffff;
             margin: 0;
@@ -243,7 +251,7 @@
             right: 0;
         }
 
-        /* تعديل خصائص أزرار البطاقات لتصبح متكافئة ومقاومة للتلتفاف في الشاشات الضيقة */
+        /* أزرار البطاقات بحجم متكافئ وعدم التفاف */
         .card-btn {
             display: inline-flex;
             align-items: center;
@@ -269,7 +277,7 @@
         .btn-battery { background-color: #0f172a; color: #10b981; border: 1.5px solid #10b981; }
         .btn-battery:hover { background-color: rgba(16, 185, 129, 0.15); }
 
-        /* بنر المدونة البارز مع ضبط الخط وعدم التفافه */
+        /* بنر المدونة البارز بخط متكافئ وعدم التفاف */
         .blog-cta-banner {
             background: linear-gradient(135deg, #1e293b, #0f172a);
             border: 1.5px solid #10b981;
@@ -369,8 +377,8 @@
             <div class="site-title-wrapper">
                 <svg class="main-logo-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
                 <h1 class="site-title" data-i18n="mainTitle">أدوات الطاقة الشمسية الاحترافية</h1>
+                <p class="site-subtitle" data-i18n="mainSubtitle">المنصة الهندسية الشاملة لتصميم وحساب منظومات الطاقة الشمسية</p>
             </div>
-            <p class="site-subtitle" data-i18n="mainSubtitle">المنصة الهندسية الشاملة لتصميم وحساب منظومات الطاقة الشمسية</p>
         </div>
     </header>
 
