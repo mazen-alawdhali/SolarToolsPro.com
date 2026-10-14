@@ -58,10 +58,11 @@
             line-height: 1.7;
         }
 
+        /* تحجيم الهيدر العلوي ليكون أكثر انضغاطاً وأناقة */
         header {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.45), rgba(30, 41, 59, 0.55)), url('header_balanced_sky_600w.webp') center/cover no-repeat;
             border-bottom: 1px solid #334155;
-            padding: 40px 20px 30px;
+            padding: 25px 15px 20px;
             text-align: center;
             position: relative;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
@@ -74,21 +75,21 @@
 
         .lang-btn {
             position: absolute;
-            top: 18px;
-            left: 18px;
+            top: 14px;
+            left: 14px;
             background: rgba(15, 23, 42, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: #ffffff;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             backdrop-filter: blur(5px);
             transition: 0.2s;
             z-index: 5;
         }
-        [dir="ltr"] .lang-btn { left: auto; right: 18px; }
+        [dir="ltr"] .lang-btn { left: auto; right: 14px; }
         .lang-btn:hover { background: rgba(255, 255, 255, 0.25); }
 
         .site-title-wrapper {
@@ -96,8 +97,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin-bottom: 10px;
+            gap: 6px;
+            margin-bottom: 6px;
         }
 
         .main-logo-icon {
@@ -105,7 +106,7 @@
         }
 
         h1.site-title {
-            font-size: 27px;
+            font-size: 24px;
             font-weight: 900;
             color: #ffffff;
             margin: 0;
@@ -116,7 +117,7 @@
         }
 
         p.site-subtitle {
-            font-size: 14px;
+            font-size: 13px;
             color: #34d399;
             margin: 0 auto;
             max-width: 650px;
@@ -127,23 +128,23 @@
         main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 35px 20px;
+            padding: 25px 15px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
         .section-header h2 {
-            font-size: 23px;
+            font-size: 21px;
             color: #ffffff;
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
             font-weight: 800;
         }
 
         .section-header p {
-            font-size: 14px;
+            font-size: 13px;
             color: #f1f5f9;
             margin: 0;
         }
@@ -151,15 +152,15 @@
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-bottom: 40px;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .tool-card {
             background-color: #1e293b;
             border: 1px solid #334155;
             border-radius: 20px;
-            padding: 24px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -186,46 +187,46 @@
         }
 
         .card-title {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 800;
             color: #ffffff;
             margin: 0;
         }
 
         .card-brief {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #34d399;
             font-weight: 700;
-            margin: 0 0 12px 0;
+            margin: 0 0 10px 0;
         }
 
         .card-desc {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #ffffff;
-            margin: 0 0 16px 0;
-            line-height: 1.65;
+            margin: 0 0 14px 0;
+            line-height: 1.6;
         }
 
         .card-features-title {
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 800;
             color: #fbbf24;
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
         }
 
         .card-features {
             list-style: none;
             padding: 0;
-            margin: 0 0 24px 0;
-            font-size: 14px;
+            margin: 0 0 20px 0;
+            font-size: 13.5px;
             color: #ffffff;
         }
 
         .card-features li {
             position: relative;
             padding-inline-start: 18px;
-            margin-bottom: 9px;
-            line-height: 1.55;
+            margin-bottom: 8px;
+            line-height: 1.5;
         }
 
         .card-features li::before {
@@ -242,19 +243,21 @@
             right: 0;
         }
 
+        /* تعديل خصائص أزرار البطاقات لتصبح متكافئة ومقاومة للتلتفاف في الشاشات الضيقة */
         .card-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 13px 20px;
+            padding: 12px 16px;
             border-radius: 12px;
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 800;
             text-decoration: none;
             transition: 0.2s;
             text-align: center;
             margin-top: auto;
             cursor: pointer;
+            white-space: nowrap;
         }
 
         .btn-calc { background-color: #059669; color: #ffffff; }
@@ -266,26 +269,26 @@
         .btn-battery { background-color: #0f172a; color: #10b981; border: 1.5px solid #10b981; }
         .btn-battery:hover { background-color: rgba(16, 185, 129, 0.15); }
 
-        /* بنر المدونة البارز */
+        /* بنر المدونة البارز مع ضبط الخط وعدم التفافه */
         .blog-cta-banner {
             background: linear-gradient(135deg, #1e293b, #0f172a);
             border: 1.5px solid #10b981;
             border-radius: 20px;
-            padding: 30px;
+            padding: 25px 20px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
         .blog-cta-banner h3 {
-            font-size: 20px;
+            font-size: 19px;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 800;
         }
         .blog-cta-banner p {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #94a3b8;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         .blog-cta-btn {
             display: inline-flex;
@@ -294,12 +297,13 @@
             background: linear-gradient(135deg, #059669, #10b981);
             color: #ffffff;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 12px 18px;
             border-radius: 14px;
-            font-size: 15px;
+            font-size: 13.5px;
             font-weight: 800;
             box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
             transition: transform 0.2s;
+            white-space: nowrap;
         }
         .blog-cta-btn:hover {
             transform: translateY(-3px);
@@ -309,19 +313,19 @@
             background-color: #0f172a;
             border-top: 1px solid #334155;
             text-align: center;
-            padding: 35px 20px;
-            font-size: 14px;
+            padding: 30px 15px;
+            font-size: 13.5px;
             color: #ffffff;
-            margin-top: 40px;
+            margin-top: 35px;
         }
 
         .footer-nav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 18px;
-            padding-bottom: 15px;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
             border-bottom: 1px solid #1e293b;
         }
 
@@ -340,8 +344,8 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 14px;
+            gap: 12px;
+            margin-top: 12px;
         }
 
         .footer-links a {
@@ -363,7 +367,7 @@
         <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
         <div class="header-container">
             <div class="site-title-wrapper">
-                <svg class="main-logo-icon" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
+                <svg class="main-logo-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
                 <h1 class="site-title" data-i18n="mainTitle">أدوات الطاقة الشمسية الاحترافية</h1>
             </div>
             <p class="site-subtitle" data-i18n="mainSubtitle">المنصة الهندسية الشاملة لتصميم وحساب منظومات الطاقة الشمسية</p>
@@ -381,7 +385,7 @@
             <div class="tool-card">
                 <div>
                     <div class="card-header-row">
-                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg></span>
+                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg></span>
                         <h3 class="card-title" data-i18n="c1Title">حاسبة الطاقة الشمسية الذكية</h3>
                     </div>
                     <p class="card-brief" data-i18n="c1Brief">أداة هندسية متكاملة لتصميم واحتساب أنظمة الطاقة الشمسية والأحمال الميدانية.</p>
@@ -398,13 +402,13 @@
                         <li data-i18n="c1f7">واجهة ثنائية اللغة: دعم كامل للغتين العربية والإنجليزية بمرونة عالية.</li>
                     </ul>
                 </div>
-                <a href="javascript:void(0)" onclick="openApp('https://calc.solartoolspro.com')" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://calc.solartoolspro.com')" class="card-btn btn-calc" data-i18n="c1Btn">دخول الحاسبة الذكية ←</a>
             </div>
 
             <div class="tool-card">
                 <div>
                     <div class="card-header-row">
-                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/><path d="m3 3 18 18"/><path d="m21 3-18 18"/></svg></span>
+                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/><path d="m3 3 18 18"/><path d="m21 3-18 18"/></svg></span>
                         <h3 class="card-title" data-i18n="c2Title">حاسبة الألواح الشمسية</h3>
                     </div>
                     <p class="card-brief" data-i18n="c2Brief">أداة هندسية متخصصة لحساب القدرة الإجمالية وعدد الألواح الشمسية المطلوبة لشحن البطاريات.</p>
@@ -419,13 +423,13 @@
                         <li data-i18n="c2f5">العمل بدون إنترنت (Offline First): واجهة بسيطة وخفيفة تعمل بالكامل دون الحاجة لاتصال بالإنترنت باللغتين العربية والإنجليزية.</li>
                     </ul>
                 </div>
-                <a href="javascript:void(0)" onclick="openApp('https://panels.solartoolspro.com')" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://panels.solartoolspro.com')" class="card-btn btn-panels" data-i18n="c2Btn">دخول حاسبة الألواح ←</a>
             </div>
 
             <div class="tool-card">
                 <div>
                     <div class="card-header-row">
-                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="14" y1="11" x2="14" y2="13"/></svg></span>
+                        <span class="card-icon" style="display:inline-flex; align-items:center;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="14" y1="11" x2="14" y2="13"/></svg></span>
                         <h3 class="card-title" data-i18n="c3Title">حاسبة ومراقب البطارية</h3>
                     </div>
                     <p class="card-brief" data-i18n="c3Brief">أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.</p>
@@ -439,7 +443,7 @@
                         <li data-i18n="c3f4">العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.</li>
                     </ul>
                 </div>
-                <a href="javascript:void(0)" onclick="openApp('https://battery.solartoolspro.com')" class="card-btn btn-battery" data-i18n="c3Btn">دخول حاسبة البطارية ➔</a>
+                <a href="javascript:void(0)" onclick="openApp('https://battery.solartoolspro.com')" class="card-btn btn-battery" data-i18n="c3Btn">دخول حاسبة البطارية ←</a>
             </div>
 
         </div>
@@ -449,7 +453,7 @@
             <h3 data-i18n="blogCtaTitle">📚 هل تبحث عن المقالات والدراسات الهندسية؟</h3>
             <p data-i18n="blogCtaSub">تفضل بزيارة مدونتنا الرسمية للاطلاع على أحدث الشروحات والأخبار والمقالات </p>
             <a href="https://blog.solartoolspro.com" target="_blank" class="blog-cta-btn" data-i18n="blogCtaBtn">
-                ⚡ تصفح مدونة مقالات الطاقة الشمسية 🧾
+                ⚡ تصفح مدونة الطاقة الشمسية 🧾
             </a>
         </div>
 
@@ -488,7 +492,7 @@
                 c1f5: "حساب الكابلات وقواطع الحماية (DC/AC): تقدير مقاسات السلك النحاسي وأحجام القواطع القياسية بناءً على المسافات والظروف المناخية.",
                 c1f6: "تصدير تقارير فنية PDF: طباعة تقرير هندسي متكامل وموثق باسم المهندس والعميل بضغطة زر.",
                 c1f7: "واجهة ثنائية اللغة: دعم كامل للغتين العربية والإنجليزية بمرونة عالية.",
-                c1Btn: "دخول الحاسبة الذكية ➔",
+                c1Btn: "دخول الحاسبة الذكية ←",
 
                 c2Title: "حاسبة الألواح الشمسية",
                 c2Brief: "أداة هندسية متخصصة لحساب القدرة الإجمالية وعدد الألواح الشمسية المطلوبة لشحن البطاريات.",
@@ -499,7 +503,7 @@
                 c2f3: "الربط مع نسبة تفريغ البطارية (DoD): مراعاة نسبة التفريغ الفعلي (مثل 80% أو 90% أو التفريغ الجزئي)؛ حيث يتكيف عدد الألواح المطلوبة آلياً تبعاً لكمية الطاقة المسحوبة والمراد إعادة تعويضها.",
                 c2f4: "تحديد القدرة الإجمالية (بالواط): احتساب القدرة بالواط لتأمين تيار الشحن المناسب لمنظم الشحن (MPPT) وساعات ذروة الشمس المتاحة.",
                 c2f5: "العمل بدون إنترنت (Offline First): واجهة بسيطة وخفيفة تعمل بالكامل دون الحاجة لاتصال بالإنترنت باللغتين العربية والإنجليزية.",
-                c2Btn: "دخول حاسبة الألواح ➔",
+                c2Btn: "دخول حاسبة الألواح ←",
 
                 c3Title: "حاسبة ومراقب البطارية",
                 c3Brief: "أداة هندسية دقيقة لاحتساب سعة بطاريات التخزين ومراقبة زمن التفريغ والمستويات الآمنة.",
@@ -509,11 +513,11 @@
                 c3f2: "إدارة عمق التفريغ الآمن (DoD): حماية البطاريات من التفريغ العميق وضمان ضبط مستويات الشحن الآمنة لإطالة العمر الافتراضي.",
                 c3f3: "تقدير زمن التشغيل: حساب الزمن المتبقي لتشغيل الأحمال الكهربائية الموصلة بناءً على معدل الاستهلاك الميداني.",
                 c3f4: "العمل بدون إنترنت (Offline): إجراء كافة الحسابات فوراً في المواقع النائية وبواجهة سريعة وخفيفة باللغتين العربية والإنجليزية.",
-                c3Btn: "دخول حاسبة البطارية ➔",
+                c3Btn: "دخول حاسبة البطارية ←",
 
                 blogCtaTitle: "📚 هل تبحث عن المقالات والدراسات الهندسية؟",
                 blogCtaSub: "تفضل بزيارة مدونتنا الرسمية للاطلاع على أحدث الشروحات والأخبار والمقالات ",
-                blogCtaBtn: "⚡ تصفح مدونة مقالات الطاقة الشمسية 🧾",
+                blogCtaBtn: "⚡ تصفح مدونة الطاقة الشمسية 🧾",
 
                 privacyPolicy: "سياسة الخصوصية",
                 aboutUs: "نبذة عنا",
@@ -563,7 +567,7 @@
 
                 blogCtaTitle: "📚 Looking for Engineering Articles & Guides?",
                 blogCtaSub: "Visit our official blog to explore the latest technical explanations, news, and guides.",
-                blogCtaBtn: "⚡ Browse Solar Articles Blog 🧾",
+                blogCtaBtn: "⚡ Browse Solar Blog 🧾",
 
                 privacyPolicy: "Privacy Policy",
                 aboutUs: "About Us",
