@@ -1,56 +1,46 @@
-const CACHE_NAME = 'solartools-main-v1';
-const urlsToCache = [
+const CACHE_NAME = 'solartools-main-v3';
+const assetsToCache = [
     './',
     './index.html',
     './site.webmanifest',
-    './favicon-96x96.png',
-    './favicon.svg',
-    './favicon.ico',
-    './apple-touch-icon.png',
-    './preview_v2.png',
     './header_balanced_sky_600w.webp',
-    './privacy.html',
-    './about.html',
-    './contact.html'
+    './preview_v2.png'
 ];
 
-// تثبيت الملفات في التخزين المؤقت
+// تثبيت ذكي يتجنب فشل الكاش بالكامل إذا لم يتم العثور على ملف فرعي
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                return cache.addAll(urlsToCache);
-            })
-            .then(() => self.skipWaiting())
+        caches.open(CACHE_NAME).then(cache => {
+            return Promise.allSettled(
+                assetsToCache.map(url => cache.add(url).catch(err => console.log('Failed to cache:', url, err)))
+            );
+        }).then(() => self.skipWaiting())
     );
 });
 
-// تفعيل الخدمة وتنظيف الكاش القديم
+// تفعيل وتطهير الكاش القديم
 self.addEventListener('activate', event => {
     event.waitUntil(
-        caches.keys().then(cacheNames => {
+        caches.keys().then(keys => {
             return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
+                keys.map(key => {
+                    if (key !== CACHE_NAME) return caches.delete(key);
                 })
             );
         }).then(() => self.clients.claim())
     );
 });
 
-// جلب المحتوى من الكاش عند انقطاع الاتصال
+// الاستجابة أوفلاين من التخزين المحلي
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                if (response) {
-                    return response;
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request).catch(() => {
+                // إذا انقطع الإنترنت ولم يكن الملف مخزناً، نرجع الصفحة الرئيسية كبديل آمن
+                if (event.request.mode === 'navigate') {
+                    return caches.match('./index.html');
                 }
-                return fetch(event.request).catch(() => {
-                    // يمكن توفير صفحة بديلة أوفلاين هنا إن لزم الأمر
-                });
-            })
+            });
+        })
     );
 });
