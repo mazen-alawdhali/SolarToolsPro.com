@@ -599,7 +599,7 @@
             window.open(targetUrl, '_blank');
         }
 
-        applyLang();
+        // تسجيل الـ Service Worker للعمل بدون إنترنت if ('serviceWorker' in navigator) {     window.addEventListener('load', () => {         navigator.serviceWorker.register('sw.js').catch(() => {});     }); }  applyLang();
     </script>
 </body>
 </html>
