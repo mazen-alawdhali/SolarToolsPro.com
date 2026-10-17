@@ -55,7 +55,6 @@
         h1 { color: #10b981; font-size: 20px; margin: 0; font-weight: 800; }
         p { color: #ffffff; font-size: 14px; }
         
-        /* تقسيم الأزرار لصفين */
         .contact-methods { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
         .row-top { display: flex; gap: 12px; width: 100%; }
         .c-btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; color: #fff; min-width: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
@@ -71,55 +70,6 @@
         button:hover { background: #0369a1; }
         .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
         .back-btn:hover { background: #0284c7; }
-
-        footer {
-            background-color: #0f172a;
-            border-top: 1px solid #334155;
-            text-align: center;
-            padding: 35px 20px;
-            font-size: 14px;
-            color: #ffffff;
-            margin-top: 50px;
-        }
-
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 18px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .footer-nav a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .footer-nav a:hover {
-            color: #34d399;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 14px;
-        }
-
-        .footer-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #10b981;
-        }
     </style>
 </head>
 <body>
@@ -132,7 +82,7 @@
             <h1 data-i18n="contactHeading">تواصل معنا</h1>
         </div>
 
-        <p data-i18n="contactIntro">يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة أدوات الطاقة الشمسية الاحترافية:</p>
+        <p data-i18n="contactIntro">يسعدنا تواصلكم معنا واستقبال استفساراتكم واقتراحاتكم لتطوير منصة أدوات الطاقة الشمسية الاحترافية:</p>
 
         <div class="contact-methods">
             <div class="row-top">
@@ -151,27 +101,13 @@
         </form>
     </div>
 
-    <footer>
-        <div class="footer-nav">
-            <a href="privacy.html" data-i18n="privacyPolicy">سياسة الخصوصية</a> |
-            <a href="about.html" data-i18n="aboutUs">نبذة عنا</a> |
-            <a href="contact.html" data-i18n="contactUs">اتصل بنا</a>
-        </div>
-        <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
-        <div class="footer-links">
-            <a href="https://calc.solartoolspro.com" target="_blank" data-i18n="fl1">الحاسبة الذكية</a> |
-            <a href="https://panels.solartoolspro.com" target="_blank" data-i18n="fl2">حاسبة الألواح</a> |
-            <a href="https://battery.solartoolspro.com" target="_blank" data-i18n="fl3">حاسبة البطارية</a>
-        </div>
-    </footer>
-
     <script>
         const dict = {
             ar: {
                 contactTabTitle: "اتصل بنا | أدوات الطاقة الشمسية الاحترافية",
                 backBtn: "➔ العودة للرئيسية",
                 contactHeading: "تواصل معنا",
-                contactIntro: "يسعدنا التواصل معك واستقبال استفساراتك واقتراحاتك لتطوير منصة أدوات الطاقة الشمسية الاحترافية:",
+                contactIntro: "يسعدنا تواصلكم معنا واستقبال استفساراتكم واقتراحاتكم لتطوير منصة أدوات الطاقة الشمسية الاحترافية:",
                 waBtn: "💬 واتساب مباشر",
                 fbBtn: "🌐 فيسبوك",
                 emailBtn: "✉️ البريد الإلكتروني",
@@ -180,12 +116,7 @@
                 msgPh: "اكتب مقترحك أو الشكوى هنا...",
                 sendBtn: "إرسال عبر البريد الإلكتروني",
                 alertEmpty: "يرجى كتابة نص الرسالة أولاً",
-                emailSubject: "مقترح/ملاحظة من",
-                privacyPolicy: "سياسة الخصوصية",
-                aboutUs: "نبذة عنا",
-                contactUs: "اتصل بنا",
-                copyright: "تصميم وتطوير <strong style=\"color:#10b981;\">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة",
-                fl1: "الحاسبة الذكية", fl2: "حاسبة الألواح", fl3: "حاسبة البطارية"
+                emailSubject: "مقترح/ملاحظة من"
             },
             en: {
                 contactTabTitle: "Contact Us | Solar Tools Pro",
@@ -200,12 +131,7 @@
                 msgPh: "Type your feedback or suggestion here...",
                 sendBtn: "Send via Email",
                 alertEmpty: "Please enter your message first",
-                emailSubject: "Feedback/Note from",
-                privacyPolicy: "Privacy Policy",
-                aboutUs: "About Us",
-                contactUs: "Contact Us",
-                copyright: "Designed & Developed by <strong style=\"color:#10b981;\">Mazen Alawdhali</strong> &copy; 2026 All Rights Reserved",
-                fl1: "Smart Calculator", fl2: "Panels Calculator", fl3: "Battery Calculator"
+                emailSubject: "Feedback/Note from"
             }
         };
 

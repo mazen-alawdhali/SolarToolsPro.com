@@ -55,55 +55,6 @@
         p { color: #f8fafc; font-size: 14px; text-align: justify; }
         .back-btn { display: inline-block; margin-bottom: 20px; background: #334155; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.2s; }
         .back-btn:hover { background: #0284c7; }
-
-        footer {
-            background-color: #0f172a;
-            border-top: 1px solid #334155;
-            text-align: center;
-            padding: 35px 20px;
-            font-size: 14px;
-            color: #ffffff;
-            margin-top: 50px;
-        }
-
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 18px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .footer-nav a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .footer-nav a:hover {
-            color: #34d399;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 14px;
-        }
-
-        .footer-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #10b981;
-        }
     </style>
 </head>
 <body>
@@ -128,20 +79,6 @@
         <p data-i18n="tool3Desc">تطبيق ميداني مخصص لقياس زمن تشغيل الأحمال المتبقي، ومراقبة عمق التفريغ الآمن (DoD) لحماية البطاريات واحتساب السعة الفعلية بالأمبير-ساعة والكيلوواط-ساعة.</p>
     </div>
 
-    <footer>
-        <div class="footer-nav">
-            <a href="privacy.html" data-i18n="privacyPolicy">سياسة الخصوصية</a> |
-            <a href="about.html" data-i18n="aboutUs">نبذة عنا</a> |
-            <a href="contact.html" data-i18n="contactUs">اتصل بنا</a>
-        </div>
-        <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
-        <div class="footer-links">
-            <a href="https://calc.solartoolspro.com" target="_blank" data-i18n="fl1">الحاسبة الذكية</a> |
-            <a href="https://panels.solartoolspro.com" target="_blank" data-i18n="fl2">حاسبة الألواح</a> |
-            <a href="https://battery.solartoolspro.com" target="_blank" data-i18n="fl3">حاسبة البطارية</a>
-        </div>
-    </footer>
-
     <script>
         const dict = {
             ar: {
@@ -154,12 +91,7 @@
                 tool2Title: "2. حاسبة الألواح الشمسية (Solar Panels Calculator)",
                 tool2Desc: "أداة متخصصة ودقيقة لحساب قدرة مصفوفة التوليد الشمسي والعدد المطلوب من الألواح لشحن بنوك البطاريات بمختلف سعاتها ووحداتها (kWh/Wh/Ah) استناداً إلى ساعات الذروة الشمسية وكفاءة المنطقة.",
                 tool3Title: "3. حاسبة ومراقب البطارية (Battery Calculator & Monitor)",
-                tool3Desc: "تطبيق ميداني مخصص لقياس زمن تشغيل الأحمال المتبقي، ومراقبة عمق التفريغ الآمن (DoD) لحماية البطاريات واحتساب السعة الفعلية بالأمبير-ساعة والكيلوواط-ساعة.",
-                privacyPolicy: "سياسة الخصوصية",
-                aboutUs: "نبذة عنا",
-                contactUs: "اتصل بنا",
-                copyright: "تصميم وتطوير <strong style=\"color:#10b981;\">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة",
-                fl1: "الحاسبة الذكية", fl2: "حاسبة الألواح", fl3: "حاسبة البطارية"
+                tool3Desc: "تطبيق ميداني مخصص لقياس زمن تشغيل الأحمال المتبقي، ومراقبة عمق التفريغ الآمن (DoD) لحماية البطاريات واحتساب السعة الفعلية بالأمبير-ساعة والكيلوواط-ساعة."
             },
             en: {
                 aboutTabTitle: "About Us | Solar Tools Pro",
@@ -171,12 +103,7 @@
                 tool2Title: "2. Solar Panels Calculator",
                 tool2Desc: "A specialized precision tool to calculate total PV array wattage and required panel count to charge battery banks across all units (kWh/Wh/Ah) based on peak sun hours and regional efficiency.",
                 tool3Title: "3. Battery Calculator & Monitor",
-                tool3Desc: "A practical field companion to measure remaining appliance runtime, monitor safe Depth of Discharge (DoD) to maximize battery cycle life, and calculate usable Ah and kWh capacities.",
-                privacyPolicy: "Privacy Policy",
-                aboutUs: "About Us",
-                contactUs: "Contact Us",
-                copyright: "Designed & Developed by <strong style=\"color:#10b981;\">Mazen Alawdhali</strong> &copy; 2026 All Rights Reserved",
-                fl1: "Smart Calculator", fl2: "Panels Calculator", fl3: "Battery Calculator"
+                tool3Desc: "A practical field companion to measure remaining appliance runtime, monitor safe Depth of Discharge (DoD) to maximize battery cycle life, and calculate usable Ah and kWh capacities."
             }
         };
 
