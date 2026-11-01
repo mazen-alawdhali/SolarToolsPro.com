@@ -342,7 +342,6 @@
             text-decoration: none;
             font-weight: 700;
             transition: color 0.2s;
-            cursor: pointer;
         }
 
         .footer-nav a:hover {
@@ -386,7 +385,7 @@
     <main>
         <section class="section-header">
             <h2 data-i18n="toolsTitle">🛠️ أدواتنا الحسابية التفاعلية</h2>
-            <p data-i18n="toolsSubtitle">اختر الأداة المناسبة لااحتياجاتك للحصول على نتائج هندسية دقيقة وموثوقة</p>
+            <p data-i18n="toolsSubtitle">اختر الأداة المناسبة لاحتياجاتك للحصول على نتائج هندسية دقيقة وموثوقة</p>
         </section>
 
         <div class="tools-grid">
@@ -470,9 +469,9 @@
 
     <footer>
         <div class="footer-nav">
-            <a href="javascript:void(0)" onclick="openPage('privacy.html')" data-i18n="privacyPolicy">سياسة الخصوصية</a> |
-            <a href="javascript:void(0)" onclick="openPage('about.html')" data-i18n="aboutUs">نبذة عنا</a> |
-            <a href="javascript:void(0)" onclick="openPage('contact.html')" data-i18n="contactUs">اتصل بنا</a>
+            <a onclick="openApp('privacy.html')" data-i18n="privacyPolicy" style="cursor: pointer;">سياسة الخصوصية</a> |
+            <a onclick="openApp('about.html')" data-i18n="aboutUs" style="cursor: pointer;">نبذة عنا</a> |
+            <a onclick="openApp('contact.html')" data-i18n="contactUs" style="cursor: pointer;">اتصل بنا</a>
         </div>
         <p data-i18n="copyright">تصميم وتطوير <strong style="color:#10b981;">مازن العوذلي</strong> &copy; 2026 جميع الحقوق محفوظة</p>
         <div class="footer-links">
@@ -586,7 +585,7 @@
             }
         };
 
-        let urlParams = new URLSearchParams(window.location.search); let langParam = urlParams.get('lang'); if(langParam) localStorage.setItem('stp_main_lang', langParam); let currentLang = langParam || localStorage.getItem('stp_main_lang') || 'ar';
+        let currentLang = localStorage.getItem('stp_main_lang') || 'ar';
 
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
@@ -610,11 +609,6 @@
             const lang = currentLang === 'en' ? 'en' : 'ar';
             const targetUrl = baseUrl + '?lang=' + lang;
             window.open(targetUrl, '_blank');
-        }
-
-        function openPage(pageUrl) {
-            const lang = currentLang === 'en' ? 'en' : 'ar';
-            window.location.href = pageUrl + '?lang=' + lang;
         }
 
         applyLang();

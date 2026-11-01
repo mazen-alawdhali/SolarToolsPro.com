@@ -135,7 +135,7 @@
             }
         };
 
-        let currentLang = localStorage.getItem('solar_app_lang') || localStorage.getItem('stp_main_lang') || 'ar';
+        let urlParams = new URLSearchParams(window.location.search); let langParam = urlParams.get('lang'); if(langParam) { localStorage.setItem('solar_app_lang', langParam); localStorage.setItem('stp_main_lang', langParam); } let currentLang = langParam || localStorage.getItem('solar_app_lang') || localStorage.getItem('stp_main_lang') || 'ar';
 
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
