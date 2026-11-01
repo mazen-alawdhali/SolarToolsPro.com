@@ -586,7 +586,7 @@
             }
         };
 
-        let currentLang = localStorage.getItem('stp_main_lang') || 'ar';
+        let urlParams = new URLSearchParams(window.location.search); let langParam = urlParams.get('lang'); if(langParam) localStorage.setItem('stp_main_lang', langParam); let currentLang = langParam || localStorage.getItem('stp_main_lang') || 'ar';
 
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
