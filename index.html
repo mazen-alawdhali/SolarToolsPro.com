@@ -588,7 +588,7 @@
 
         function toggleLang() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            localStorage.setItem('stp_main_lang', currentLang);
+            localStorage.setItem('stp_main_lang', currentLang); localStorage.setItem('solar_app_lang', currentLang);
             applyLang();
         }
 
@@ -596,7 +596,7 @@
             const t = dict[currentLang];
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.getElementById('langBtn').innerText = currentLang === 'ar' ? 'EN' : 'AR';
+            document.getElementById('langBtn').innerText = currentLang === 'ar' ? 'EN' : 'AR'; document.querySelectorAll('.footer-nav a').forEach(a => { a.href = a.getAttribute('href').split('?')[0] + '?lang=' + currentLang; });
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
