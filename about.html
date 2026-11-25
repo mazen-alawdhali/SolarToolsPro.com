@@ -60,7 +60,7 @@
 <body>
     <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
     <div class="container">
-        <a href="index.html" class="back-btn" data-i18n="backBtn">➔ العودة للرئيسية</a>
+        <a href="index.html" onclick="event.preventDefault(); try{window.close();}catch(e){} setTimeout(function(){if(!window.closed){if(window.history.length>1){window.history.back();}else{window.location.href='index.html';}}},120); return false;" class="back-btn" data-i18n="backBtn">➔ العودة للرئيسية</a>
         
         <div class="header-title-box">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
